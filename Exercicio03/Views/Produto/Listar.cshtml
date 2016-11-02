@@ -1,0 +1,31 @@
+﻿@model List<Exercicio03.Models.Produto>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+<table class="table table-striped"">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Data de Cadastro</th>
+            <th>Valor</th>
+            <th>Nacional</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+           @foreach (var item in Model)    
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.Descricao</td>
+                <td>@item.DataCadastro</td>
+                <td>@item.Valor</td>
+                @MeuHelper.nacional(item.Nacional)
+            </tr>
+        }
+    </tbody>
+</table>
+

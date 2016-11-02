@@ -1,0 +1,24 @@
+﻿@helper BtnSubmit(string valor)
+{
+    <div class="form-group">
+        <input type="submit" value="@valor" class="btn btn-primary" />
+    </div>
+}
+@helper Mensagem(string msg)
+{
+if (@msg != null)
+{
+        <div class="alert alert-success">
+            @msg
+        </div>
+}}
+@helper nacional(bool a) { 
+if (@a)
+{
+    <td>Sim</td>
+}
+else
+{
+    <td>Não</td>
+}
+    }
